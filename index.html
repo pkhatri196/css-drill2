@@ -29,6 +29,8 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+
+    
   </head>
   <body align="center">
 
@@ -45,12 +47,16 @@
     <div class="space"></div>
     <h1 class="heading" style="color: hsl(233, 13%, 49%)"> Our Pricing </h1>
        <div class="space"></div>
-      <span> <span style="color:hsl(234, 14%, 74%)">Annually  </span>
-      <label class="switch">
-        <input type="checkbox">
+      <span> <span style="color:hsl(234, 14%, 74%)"> Annually </span>
+      
+      <!-- Toggle -->
+      
+      <label  class="switch">
+        <input id="toggle" type="checkbox" >
         <span class="slider round"></span>
       </label>
-      <span style="color:hsl(234, 14%, 74%)">  Monthly</span></span>
+
+      <span style="color:hsl(234, 14%, 74%)"> Monthly</span></span>
 
       <section class="containers">
          <div class="price_cards">
@@ -58,7 +64,7 @@
               <br>
                   <p class="card_text">Basic</p>
                   <br> 
-                  <p class="price"><span style="font-size:30px;">$</span>199.99</p>
+                  <p class="price" id="basic"><span style="font-size:30px;">$</span>199.99</p>
                   <br>
                   <br>
                   <hr>
@@ -83,7 +89,7 @@
               <br>
               <p class="card_text">Professional</p>
               <br>
-              <p class="price"><span style="font-size:30px;">$</span>249.99</p>
+              <p id="professional" class="price"><span style="font-size:30px;">$</span>249.99</p>
               <br>
               <br>
               <hr>
@@ -109,7 +115,7 @@
               <div class="card_descriptor">
               <p class="card_text">Master</p>
               <br>
-              <p class="price"><span style="font-size:30px;">$</span>399.99</p>
+              <p id="master" class="price"><span style="font-size:30px;">$</span>399.99</p>
               <br>
               <br>
               <hr>
@@ -143,5 +149,20 @@
         </g>
       </svg>
    
+       <!-- JS CODE -->
+
+      <script>
+        var toggle = document.getElementsById("toggle");
+
+        toggle.addEventListener('change', function () {
+
+          if (toggle.checked) {
+            document.getElementsById("basic").innerHTML = "19.99";
+            document.getElementsById("professional").innerHTML = "24.99";
+            document.getElementsById("master").innerHTML = "39.99";
+          }
+        });
+
+      </script>
   </body>
 </html>
