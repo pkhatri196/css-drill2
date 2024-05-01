@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* to box model*/
+}
+
+body{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: hsl(240, 78%, 98%);
+}
+
+.top {
+    position: fixed;
+    right: 0;
+    bottom:0;
+    width: 30%;
+    height: 110%;
+    z-index: -1;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 40%;
+    height: 40%;
+    z-index: -1;
+    /* Move it behind other content */
+}
+
+
+
+.price_cards{
+    margin:50px;
+     display:flex;
+    justify-content:center;
+}
+.space{
+    height:50px;
+}
+
+strong{
+     color: hsl(232, 13%, 33%);
+}
+
+.card1{
+    width:25%;
+    height:425px; 
+    border: none;
+    border-radius:10px;
+    padding:20px;
+    box-shadow: 2px 2px 2px hsl(233, 13%, 49%);
+    background-color: white;
+}
+
+.card1:hover {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    height: 450px;
+}
+
+.card1:hover p{
+    color:white;
+}
+
+.card1:hover button{
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+
+
+
+.price{
+    font-size:50px;
+}
+
+.card_text{
+    color:hsl(233, 13%, 49%);
+}
+
+button{
+    font-family: "Montserrat", sans-serif;
+    height: 40px;
+    width:250px;
+    font-weight:700;
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    color:white;
+    border-radius:5px;
+    border:none;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:hsl(237, 63%, 64%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media( min-width:375px){
+
+     
+
+
+
+
+
+
+}
